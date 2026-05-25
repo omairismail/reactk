@@ -2,26 +2,25 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 function App() {
-  let foodItems = [
-    "Fruits",
-    "Vagetables",
-    "Home made foods",
-    "Dry fruits",
-    "dairy products",
-  ];
+  let foodItems = [];
+  // let foodItems = [
+  //   "Fruits",
+  //   "Vagetables",
+  //   "Home made foods",
+  //   "Dry fruits",
+  //   "dairy products",
+  // ];
+  // let emptyFoodItems = foodItems.length===0 ? <h3>(I am still Hangry)</h3>:null;
   return (
     // <React.Fragment>
     <>
       <div>Healthy Foods</div>
+     { foodItems.length===0 && <h3>(I am still Hangry)</h3>}  
+      {/* {emptyFoodItems} */}
       <ul class="list-group">
         {foodItems.map((items) => (
           <li class="list-group-item">{items}</li>
         ))}
-        {/* <li class="list-group-item">Fruits</li> */}
-        {/* <li class="list-group-item">Vagetables</li>
-        <li class="list-group-item">Home made foods</li>
-        <li class="list-group-item">Dry fruits</li> */} 
-        {/* <li class="list-group-item">dairy products</li> */}
       </ul>
     </>
     /* </React.Fragment> */
